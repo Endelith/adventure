@@ -1,0 +1,10 @@
+jdk:
+  - openjdk25
+
+before_install:
+  - sdk install java 25-open
+  - sdk use java 25-open
+  - java -version
+
+install:
+  - ./gradlew publishToMavenLocal --no-daemon
